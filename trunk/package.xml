@@ -3,7 +3,7 @@
     http://pear.php.net/dtd/tasks-1.0.xsd
     http://pear.php.net/dtd/package-2.0
     http://pear.php.net/dtd/package-2.0.xsd">
- <name>agent-arc</name>
+ <name>agent</name>
  <uri>http://code.google.com/p/agent-arc/</uri>
  <summary>Agent ARC</summary>
  <description>A quick and simple web interface for ARC2, designed to act as a semantic web agent (or rather, agent manager).</description>
