@@ -1,0 +1,11 @@
+1) Copy app/config/example-default.ini to app/config/default.ini
+2) Customise it as needed - you'll need at least two databases, one for the triplestore, one for the application
+3) Make sure you have ARC2 in your include path. You can put lib/arc/ into it, or install a newer version elsewhere.
+4) Set up a virtual host
+
+<VirtualHost *:80>
+    DocumentRoot g:/work/agent/app/html
+    ServerName agent
+</VirtualHost>
+
+5) Make sure you allow .htaccess to work - AllowOverride All is kinda important (@todo fix the virtualhost example above)
