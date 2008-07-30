@@ -3,6 +3,27 @@
     <head>
         <title>My first Zend Framework App</title>
         <style type="text/css">
+            html {
+                margin: 0;
+                padding: 0;                
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: arial;
+            }
+
+            .inner-content {
+                margin: 1.0em;
+            }
+
+            .header {
+                padding-left: 1.0em;
+                background-color: rgb(100, 100, 100);
+                color: white;
+                margin-top: 0;
+            }
+
             .messages {
                 padding: 0.5em;
                 padding-top: 0;
@@ -10,21 +31,57 @@
                 margin: 1.0em;
                 border: 1px solid rgb(240, 240, 240);
             }
+
+            .navigation {
+                float: right;
+                border-bottom: 1px solid rgb(240, 240, 240);
+                display: block;
+                padding-bottom: 0.25em;
+                margin-right: 1.0em;
+            }
+            .navigation li {
+                display: inline;
+            }
+
+            .navigation li a {
+                text-decoration: none !important;
+            }
+
+            .navigation li a:hover {
+                text-decoration: underline !important;
+            }
         </style>
     </head>
     <body>
-        <!-- Todo: partialize -->
-        <?php if (!empty($this->messages)) { ?>
-            <div class="messages">
-                <h2>Messages</h2>
-                <ul>
-                    <?php foreach ($this->messages as $message) { ?>
-                        <li><?php print $message ?></li>
-                    <?php } ?>
-                </ul>
-            </div>
-        <?php } ?>
+       <div class="header">
+            <h1>Agent</h1>
 
-        <?php print $this->layout()->content; ?>
+            <ul class="navigation">
+                <li><a href="/">Home</a></li>
+                <li><a href="/install/">Install</a></li>
+                <li><a href="/sparql/">SPARQL</a></li>
+                <li><a href="/agents/">Agents</a></li>
+            </ul>
+        </div>
+        <div class="inner-content">
+             <!-- Todo: partialize -->
+            <?php if (!empty($this->messages)) { ?>
+                <div class="messages">
+                    <h2>Messages</h2>
+                    <ul>
+                        <?php foreach ($this->messages as $message) { ?>
+                            <li><?php print $message ?></li>
+                        <?php } ?>
+                    </ul>
+                </div>
+            <?php } ?>
+
+            <div class="content">
+                <?php print $this->layout()->content; ?>
+            </div>
+            <div class="footer">
+
+            </div>
+        </div>
     </body>
 </html>
