@@ -1,0 +1,22 @@
+<h1>Installation</h1>
+
+<?php if ($this->error) { ?>
+    <h2>Error</h2>
+    <p><?php print $this->error; ?>
+<?php }?>
+
+<h2>Configuration</h2>
+<table>
+    <tr>
+        <th>Database settings and schema correct</th>
+        <td><?php print $this->db? "Yes" : "No"; ?></td>
+    </tr>
+    <tr>
+        <th>ARC2 installed</th>
+        <td><?php print $this->store->isSetUp()? "Yes" : "No"; ?></td>
+    </tr>
+    <tr>
+        <th>XML_GRDDL installed</th>
+        <td><?php print $this->xml_grddl? "Yes" : "No"; ?></td>
+    </tr>
+</table>

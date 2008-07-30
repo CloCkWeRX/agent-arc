@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>My first Zend Framework App</title>
+        <style type="text/css">
+            .messages {
+                padding: 0.5em;
+                padding-top: 0;
+                padding-left: 1.0em;
+                margin: 1.0em;
+                border: 1px solid rgb(240, 240, 240);
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Todo: partialize -->
+        <?php if (!empty($this->messages)) { ?>
+            <div class="messages">
+                <h2>Messages</h2>
+                <ul>
+                    <?php foreach ($this->messages as $message) { ?>
+                        <li><?php print $message ?></li>
+                    <?php } ?>
+                </ul>
+            </div>
+        <?php } ?>
+
+        <?php print $this->layout()->content; ?>
+    </body>
+</html>
