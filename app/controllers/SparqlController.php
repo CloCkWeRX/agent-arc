@@ -29,7 +29,7 @@ class SparqlController extends Zend_Controller_Action
      */
     public function indexAction()
     {
-        $store = $this->getStore($this->getConfig());
+        $store = Zend_Controller_Front::getInstance()->getParam('store');
 
         $this->view->store = $store;
     }
@@ -41,7 +41,7 @@ class SparqlController extends Zend_Controller_Action
      */
     public function queryAction()
     {
-        $store = $this->getStore($this->getConfig());
+        $store = Zend_Controller_Front::getInstance()->getParam('store');
 
         $query = $this->_request->getParam('query');
 
@@ -63,7 +63,7 @@ class SparqlController extends Zend_Controller_Action
      */
     public function loadAction()
     {
-        $store = $this->getStore($this->getConfig());
+        $store = Zend_Controller_Front::getInstance()->getParam('store');
 
         $url = $this->_request->getParam('url');
 
@@ -116,39 +116,6 @@ class SparqlController extends Zend_Controller_Action
 
             }
         */
-
-    /**
-     * Fetch an instance of the Triplestore.
-     *
-     * @param Zend_Config_Ini $config Application Configuration
-     *
-     * @todo    Refactor
-     * @return  ARC2
-     */
-    protected function getStore(Zend_Config $config)
-    {
-        $store = ARC2::getStore(array(
-                                'db_name' => $config->arc->db->name,
-                                'db_user' => $config->arc->db->username,
-                                'db_pwd' =>  $config->arc->db->password,
-                                'db_host' =>  $config->arc->db->host,
-                                'store_name' => $config->arc->db->name
-                                ));
-
-        return $store;
-    }
-
-    /**
-     * Fetch config
-     *
-     * @todo    Refactor
-     * @return  Zend_Config_Ini
-     */
-    protected function getConfig()
-    {
-        $config_path = dirname(__FILE__) . '/../config/default.ini';
-        return new Zend_Config_Ini($config_path, 'default');
-    }
 
 }
 

@@ -5,13 +5,7 @@ class InstallController extends Zend_Controller_Action
     {
         $flash = array();
 
-        //Config - refactor?
-        $config_path = dirname(__FILE__) . '/../config/default.ini';
-        if (!file_exists($config_path)) {
-            $flash[] = "Could not locate " . $config_path;
-        }
-
-        $config = new Zend_Config_Ini($config_path, 'default');
+        $config = Zend_Controller_Front::getInstance()->getParam('config');
 
         //ARC
         list($flash, $db)        = $this->setupDB($flash, $config);
@@ -78,13 +72,7 @@ class InstallController extends Zend_Controller_Action
 
         $connection = false;
         try {
-            $db = Zend_Db::factory($config->db->type, array(
-                'host'     => $config->db->host,
-                'username' => $config->db->username,
-                'password' => $config->db->password,
-                'dbname'   => $config->db->name
-            ));
-
+            $db = Zend_Controller_Front::getInstance()->getParam('db');
             $db->getConnection();
 
             $connection = true;
