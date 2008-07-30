@@ -1,0 +1,6 @@
+<form action="/addressbook/search">
+    Email: <input type="text" name="email" value="daniel.oconnor@gmail.com" />
+    <input type="submit" />
+</form>
+
+<?php print $this->partial('/sparql/_result_as_table.phtml', $this->result); ?>

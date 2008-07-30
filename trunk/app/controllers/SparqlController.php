@@ -45,13 +45,13 @@ class SparqlController extends Zend_Controller_Action
 
         $query = $this->_request->getParam('query');
 
-        $result = $store->query($query, 'rows');
+        $result = $store->query($query);
 
         if (!$result) {
             $this->view->messages[] = "Query failed for some reason.";
         }
 
-        $this->view->result = $result;
+        $this->view->result = $result['result'];
         $this->view->query  = $query;
         $this->view->store  = $store;
     }

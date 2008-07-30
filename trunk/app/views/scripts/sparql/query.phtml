@@ -1,36 +1,8 @@
-<?php
-function render_heading($row) {
-    $keys = array_keys($row);
-
-    
-}
-?>
 <h1>Query</h1>
 <h2>Result</h2>
-<p>You have <?php print count($this->result); ?> result(s)</p>
 
-<table>
-<?php var_dump($this->result); ?>
-<?php foreach ($this->result as $n => $row) { ?>
-    <?php if ($n == 0) { ?>
-        <tr>
-            <?php foreach (array_keys($row) as $label) { ?>
-                <?php if (count(explode(' ', $label)) == 1) { ?>
-                    <th><?php print $label; ?></th>
-                <?php } ?>
-            <?php } ?>
-        </tr>
-    <?php } ?>
-
-    <tr>
-        <?php foreach ($row as $key => $value) { ?>
-            <?php if (count(explode(' ', $key)) == 1) { ?>
-                <td><?php print $value; ?></td>
-            <?php } ?>
-        <?php } ?>
-    </tr>
-<?php } ?>
-</table>
+<?php print $this->partial('/sparql/_result_as_table.phtml', $this->result); ?>
 
 <h2>SPARQL</h2>
+<a href="/sparql/">New query</a>
 <pre><?php print $this->escape($this->query); ?></pre>
