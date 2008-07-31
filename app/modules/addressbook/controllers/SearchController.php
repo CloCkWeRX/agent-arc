@@ -1,16 +1,6 @@
 <?php
-class AddressBook_IndexController extends Zend_Controller_Action implements AgentModuleInterface
+class AddressBook_SearchController extends Zend_Controller_Action implements AgentModuleInterface
 {
-    public function indexAction()
-    {
-    }
-
-    public function settingsAction() {
-        $config = Zend_Controller_Front::getInstance()->getParam('config');
-
-        $this->view->settings = $config->addressbook;
-    }
-
     protected function buildSearchQuery() {
         $email      = $this->_request->getParam('email');
         $nickname   = $this->_request->getParam('nickname');
@@ -30,7 +20,7 @@ class AddressBook_IndexController extends Zend_Controller_Action implements Agen
         return $pattern;
     }
 
-    public function searchAction()
+    public function indexAction()
     {
         $pattern = implode("\n", $this->buildSearchQuery());
 
