@@ -1,5 +1,5 @@
 <?php
-class AddressBook_IndexController extends Zend_Controller_Action implements AgentModuleInterface
+class AddressBook_IndexController extends Zend_Controller_Action
 {
     public function indexAction()
     {
