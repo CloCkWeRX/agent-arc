@@ -8,7 +8,7 @@ class InstallController extends Zend_Controller_Action
         $config = Zend_Controller_Front::getInstance()->getParam('config');
 
         //ARC
-        list($flash, $db)        = $this->setupDB($flash, $config);
+        //list($flash, $db)        = $this->setupDB($flash, $config);
         list($flash, $store)     = $this->setupARC($flash, $config);
         list($flash, $xml_grddl) = $this->setupXMLGRDDL($flash);
 
@@ -67,7 +67,9 @@ class InstallController extends Zend_Controller_Action
     /**
      * Checks DB configuration
      */
+    /*
     protected function setupDB($flash, $config) {
+
         require_once 'Zend/Db.php';
 
         $connection = false;
@@ -84,5 +86,6 @@ class InstallController extends Zend_Controller_Action
 
         return array($flash, $connection);
     }
+    */
 }
 
