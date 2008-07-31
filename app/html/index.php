@@ -34,5 +34,10 @@ $front->setParam('db', $db);
 $front->setParam('config', $config);
 $front->setParam('store', $store);
 
-Zend_Controller_Front::run(dirname(__FILE__) . '/../controllers');
+
+$front->addControllerDirectory(dirname(__FILE__) . '/../controllers');
+$front->addModuleDirectory(dirname(__FILE__) . '/../modules');
+
+$front->throwExceptions(true);
+$front->dispatch();
 
