@@ -1,6 +1,5 @@
 <?php
 require_once 'Zend/Loader.php';
-require_once dirname(__FILE__) . '/../../lib/agent/AgentModuleInterface.php';
 
 spl_autoload_register(array('Zend_Loader', 'autoload'));
 
