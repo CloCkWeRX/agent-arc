@@ -1,5 +1,5 @@
 <?php
-class FoafInferenceController extends Zend_Controller_Action
+class FoafInference_IndexController extends Zend_Controller_Action
 {
     public function indexAction()
     {
