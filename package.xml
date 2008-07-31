@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package packagerversion="1.7.2" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
-    http://pear.php.net/dtd/tasks-1.0.xsd
-    http://pear.php.net/dtd/package-2.0
-    http://pear.php.net/dtd/package-2.0.xsd">
+<package packagerversion="1.7.2" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
  <name>agent</name>
  <uri>http://code.google.com/p/agent-arc/</uri>
  <summary>Agent ARC</summary>
@@ -13,8 +10,8 @@
   <email>daniel.oconnor@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2008-07-30</date>
- <time>18:36:07</time>
+ <date>2008-07-31</date>
+ <time>04:17:28</time>
  <version>
   <release>0.0.1</release>
   <api>0.0.1</api>
@@ -26,69 +23,85 @@
  <license uri="http://www.opensource.org/licenses/bsd-license.php">BSD Style</license>
  <notes>.</notes>
  <contents>
-  <dir baseinstalldir="www" name="/">
-   <file baseinstalldir="www" name="INSTALL" role="data" />
-   <file baseinstalldir="www" name="app/config/default-example.ini" role="data" />
-   <file baseinstalldir="www" name="app/controllers/ErrorController.php" role="php" />
-   <file baseinstalldir="www" name="app/controllers/IndexController.php" role="php" />
-   <file baseinstalldir="www" name="app/controllers/InstallController.php" role="php" />
-   <file baseinstalldir="www" name="app/controllers/SparqlController.php" role="php" />
-   <file baseinstalldir="www" name="app/html/.htaccess" role="data" />
-   <file baseinstalldir="www" name="app/html/index.php" role="php" />
-   <file baseinstalldir="www" name="app/views/scripts/layout.phtml" role="data" />
-   <file baseinstalldir="www" name="app/views/scripts/error/error.phtml" role="data" />
-   <file baseinstalldir="www" name="app/views/scripts/index/index.phtml" role="data" />
-   <file baseinstalldir="www" name="app/views/scripts/install/index.phtml" role="data" />
-   <file baseinstalldir="www" name="app/views/scripts/sparql/index.phtml" role="data" />
-   <file baseinstalldir="www" name="app/views/scripts/sparql/load.phtml" role="data" />
-   <file baseinstalldir="www" name="app/views/scripts/sparql/query.phtml" role="data" />
-   <file baseinstalldir="www" name="lib/arc/ARC2.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/ARC2_Class.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/ARC2_getFormat.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/ARC2_Reader.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/LICENCE.txt" role="data" />
-   <file baseinstalldir="www" name="lib/arc/extractors/ARC2_AdrFoafExtractor.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/extractors/ARC2_DcExtractor.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/extractors/ARC2_ErdfExtractor.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/extractors/ARC2_HcardFoafExtractor.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/extractors/ARC2_MicroformatsExtractor.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/extractors/ARC2_OpenidExtractor.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/extractors/ARC2_RdfaExtractor.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/extractors/ARC2_RDFExtractor.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/extractors/ARC2_RelTagDcExtractor.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/extractors/ARC2_RelTagSkosExtractor.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/extractors/ARC2_XfnExtractor.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/parsers/ARC2_LegacyXMLParser.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/parsers/ARC2_RDFParser.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/parsers/ARC2_RDFXMLParser.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/parsers/ARC2_RSSParser.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/parsers/ARC2_SemHTMLParser.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/parsers/ARC2_SPARQLParser.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/parsers/ARC2_SPARQLPlusParser.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/parsers/ARC2_SPARQLXMLResultParser.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/parsers/ARC2_TurtleParser.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/serializers/ARC2_NTriplesSerializer.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/serializers/ARC2_RDFJSONSerializer.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/serializers/ARC2_RDFSerializer.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/serializers/ARC2_RDFXMLSerializer.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/serializers/ARC2_TurtleSerializer.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/store/ARC2_Store.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/store/ARC2_StoreAskQueryHandler.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/store/ARC2_StoreConstructQueryHandler.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/store/ARC2_StoreDeleteQueryHandler.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/store/ARC2_StoreDescribeQueryHandler.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/store/ARC2_StoreEndpoint.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/store/ARC2_StoreHelper.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/store/ARC2_StoreInferencer.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/store/ARC2_StoreInsertQueryHandler.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/store/ARC2_StoreLoadQueryHandler.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/store/ARC2_StoreQueryHandler.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/store/ARC2_StoreRDFXMLLoader.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/store/ARC2_StoreRSSLoader.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/store/ARC2_StoreSelectQueryHandler.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/store/ARC2_StoreSemHTMLLoader.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/store/ARC2_StoreTableManager.php" role="php" />
-   <file baseinstalldir="www" name="lib/arc/store/ARC2_StoreTurtleLoader.php" role="php" />
+  <dir baseinstalldir="agent" name="/">
+   <file baseinstalldir="agent" name="app/config/default-example.ini" role="web" />
+   <file baseinstalldir="agent" name="app/controllers/ErrorController.php" role="web" />
+   <file baseinstalldir="agent" name="app/controllers/IndexController.php" role="web" />
+   <file baseinstalldir="agent" name="app/controllers/InstallController.php" role="web" />
+   <file baseinstalldir="agent" name="app/controllers/SparqlController.php" role="web" />
+   <file baseinstalldir="agent" name="app/html/.htaccess" role="web" />
+   <file baseinstalldir="agent" name="app/html/index.php" role="web" />
+   <file baseinstalldir="agent" name="app/modules/addressbook/controllers/IndexController.php" role="web" />
+   <file baseinstalldir="agent" name="app/modules/addressbook/controllers/ProfileController.php" role="web" />
+   <file baseinstalldir="agent" name="app/modules/addressbook/controllers/SearchController.php" role="web" />
+   <file baseinstalldir="agent" name="app/modules/addressbook/controllers/SettingsController.php" role="web" />
+   <file baseinstalldir="agent" name="app/modules/addressbook/views/scripts/layout.phtml" role="web" />
+   <file baseinstalldir="agent" name="app/modules/addressbook/views/scripts/index/index.phtml" role="web" />
+   <file baseinstalldir="agent" name="app/modules/addressbook/views/scripts/profile/homepage.phtml" role="web" />
+   <file baseinstalldir="agent" name="app/modules/addressbook/views/scripts/profile/index.phtml" role="web" />
+   <file baseinstalldir="agent" name="app/modules/addressbook/views/scripts/profile/mbox-sha1sum.phtml" role="web" />
+   <file baseinstalldir="agent" name="app/modules/addressbook/views/scripts/search/index.phtml" role="web" />
+   <file baseinstalldir="agent" name="app/modules/addressbook/views/scripts/search/_result_as_table.phtml" role="web" />
+   <file baseinstalldir="agent" name="app/modules/addressbook/views/scripts/settings/index.phtml" role="web" />
+   <file baseinstalldir="agent" name="app/modules/foafinference/controllers/IndexController.php" role="web" />
+   <file baseinstalldir="agent" name="app/modules/foafinference/views/scripts/layout.phtml" role="web" />
+   <file baseinstalldir="agent" name="app/modules/foafinference/views/scripts/index/index.phtml" role="web" />
+   <file baseinstalldir="agent" name="app/views/scripts/layout.phtml" role="web" />
+   <file baseinstalldir="agent" name="app/views/scripts/error/error.phtml" role="web" />
+   <file baseinstalldir="agent" name="app/views/scripts/index/index.phtml" role="web" />
+   <file baseinstalldir="agent" name="app/views/scripts/install/index.phtml" role="web" />
+   <file baseinstalldir="agent" name="app/views/scripts/sparql/index.phtml" role="web" />
+   <file baseinstalldir="agent" name="app/views/scripts/sparql/load.phtml" role="web" />
+   <file baseinstalldir="agent" name="app/views/scripts/sparql/query.phtml" role="web" />
+   <file baseinstalldir="agent" name="lib/agent/SPARQL.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/ARC2.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/ARC2_Class.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/ARC2_getFormat.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/ARC2_Reader.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/LICENCE.txt" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/extractors/ARC2_AdrFoafExtractor.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/extractors/ARC2_DcExtractor.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/extractors/ARC2_ErdfExtractor.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/extractors/ARC2_HcardFoafExtractor.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/extractors/ARC2_MicroformatsExtractor.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/extractors/ARC2_OpenidExtractor.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/extractors/ARC2_RdfaExtractor.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/extractors/ARC2_RDFExtractor.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/extractors/ARC2_RelTagDcExtractor.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/extractors/ARC2_RelTagSkosExtractor.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/extractors/ARC2_XfnExtractor.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/parsers/ARC2_LegacyXMLParser.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/parsers/ARC2_RDFParser.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/parsers/ARC2_RDFXMLParser.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/parsers/ARC2_RSSParser.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/parsers/ARC2_SemHTMLParser.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/parsers/ARC2_SPARQLParser.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/parsers/ARC2_SPARQLPlusParser.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/parsers/ARC2_SPARQLXMLResultParser.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/parsers/ARC2_TurtleParser.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/serializers/ARC2_NTriplesSerializer.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/serializers/ARC2_RDFJSONSerializer.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/serializers/ARC2_RDFSerializer.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/serializers/ARC2_RDFXMLSerializer.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/serializers/ARC2_TurtleSerializer.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/store/ARC2_Store.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/store/ARC2_StoreAskQueryHandler.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/store/ARC2_StoreConstructQueryHandler.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/store/ARC2_StoreDeleteQueryHandler.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/store/ARC2_StoreDescribeQueryHandler.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/store/ARC2_StoreEndpoint.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/store/ARC2_StoreHelper.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/store/ARC2_StoreInferencer.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/store/ARC2_StoreInsertQueryHandler.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/store/ARC2_StoreLoadQueryHandler.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/store/ARC2_StoreQueryHandler.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/store/ARC2_StoreRDFXMLLoader.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/store/ARC2_StoreRSSLoader.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/store/ARC2_StoreSelectQueryHandler.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/store/ARC2_StoreSemHTMLLoader.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/store/ARC2_StoreTableManager.php" role="web" />
+   <file baseinstalldir="agent" name="lib/arc/store/ARC2_StoreTurtleLoader.php" role="web" />
+   <file baseinstalldir="agent" name="INSTALL" role="web" />
   </dir>
  </contents>
  <dependencies>
@@ -99,6 +112,11 @@
    <pearinstaller>
     <min>1.4.0</min>
    </pearinstaller>
+   <package>
+    <name>Zend</name>
+    <channel>pear.phpmafia.net</channel>
+    <min>1.5.0</min>
+   </package>
   </required>
  </dependencies>
  <phprelease />
@@ -112,7 +130,7 @@
     <release>alpha</release>
     <api>alpha</api>
    </stability>
-   <date>2008-07-30</date>
+   <date>2008-07-31</date>
    <license uri="http://www.opensource.org/licenses/bsd-license.php">BSD Style</license>
    <notes>.</notes>
   </release>
