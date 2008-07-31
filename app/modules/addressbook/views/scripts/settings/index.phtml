@@ -1,0 +1,35 @@
+<h1>Settings</h1>
+<p>Configure setup of your address book</p>
+<form action="/addressbook/settings">
+    <table>
+        <tr>
+            <th>
+                Explore N layers deep
+            </th>
+
+            <td>
+                1
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Follow RDFS:seeAlso
+            </th>
+
+            <td>
+                Yes
+            </td>
+        </tr>
+        <tr>
+            <th>
+                What is your primary email?
+            </th>
+
+            <td>
+                <!-- <input type="text" value="<?php print $this->settings->email; ?>" /> -->
+                    <?php print $this->settings->email; ?>
+            </td>
+        </tr>
+    </table>
+    <!--    <input type="submit" /> -->
+</form>
