@@ -2,5 +2,7 @@
 <p>This is your handy dandy semantic web agent. Let's take a look at what it can do</p>
 
 <ul>
-    <li><a href="/addressbook/">Address book</a></li>
+    <?php foreach ($this->modules as $module) { ?>
+        <li><a href="/<?php print strtolower($module); ?>/"><?php print $module; ?></a></li>
+    <?php } ?>
 </ul>
