@@ -5,4 +5,6 @@
     <input type="submit" />
 </form>
 
-<?php print $this->partial('/sparql/_result_as_table.phtml', $this->result); ?>
+<?php if (!empty($this->result)) { ?>
+    <?php print $this->partial('/sparql/_result_as_table.phtml', $this->result); ?>
+<?php } ?>
