@@ -1,3 +1,12 @@
+<h2>Load some RDF</h2>
+<form action="/sparql/load">
+    <input type="text" name="url" />
+    <input type="submit" value="Load" />
+</form>
+
+<h2>See all Data</h2>
+<p><a href="/sparql/raw">Raw</a> view</p>
+
 <h2>Do a query</h2>
 <form action="/sparql/query">
     <textarea name="query" rows="40" cols="80">
@@ -41,8 +50,3 @@ SELECT ?person ?name ?location ?lat ?long ?area
     <input type="submit" value="Query" />
 </form>
 
-<h2>Load some SPARQL</h2>
-<form action="/sparql/load">
-    <input type="text" name="url" />
-    <input type="submit" value="Load" />
-</form>
