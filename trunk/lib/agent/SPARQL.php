@@ -32,7 +32,7 @@ class Agent_SPARQL {
             $prefixes = self::getDefaultPrefixes();
         }
 
-        $query = $prefixes . $query_fragment
+        $query = $prefixes . $query_fragment;
         $result = $store->query($query);
 
         return $result['result'];
