@@ -1,5 +1,5 @@
 <?php
-class AddressBook_SearchController extends Zend_Controller_Action implements AgentModuleInterface
+class AddressBook_SearchController extends Zend_Controller_Action
 {
     protected function buildSearchQuery() {
         $email      = $this->_request->getParam('email');
