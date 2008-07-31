@@ -4,6 +4,11 @@ class AddressBook_SearchController extends Zend_Controller_Action
     protected function buildSearchQuery() {
         $email      = $this->_request->getParam('email');
         $nickname   = $this->_request->getParam('nickname');
+        $name       = $this->_request->getParam('name');
+
+        $this->view->email = $email;
+        $this->view->nickname = $nickname;
+        $this->view->name = $name;
 
         $pattern = array();
 
@@ -16,6 +21,11 @@ class AddressBook_SearchController extends Zend_Controller_Action
         if (!empty($nickname)) {
             $pattern[] = sprintf('?person foaf:nick "%s" .', $nickname);
         }
+
+        if (!empty($name)) {
+            $pattern[] = sprintf('?person foaf:name "%s" .', $name);
+        }
+
 
         return $pattern;
     }

@@ -28,11 +28,15 @@ class Agent_SPARQL {
     }
 
     public static function query($store, $query_fragment, $substitutions = array(), $prefixes = null) {
+        $log = Log::singleton('firebug');
+
         if (empty($prefixes)) {
             $prefixes = self::getDefaultPrefixes();
         }
 
-        $query = $prefixes . $query_fragment;
+
+        $query = $prefixes . "\n" . $query_fragment;
+        $log->log($query);
         $result = $store->query($query);
 
         return $result['result'];
