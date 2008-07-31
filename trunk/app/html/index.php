@@ -8,12 +8,7 @@ $config_path = dirname(__FILE__) . '/../config/default.ini';
 $config = new Zend_Config_Ini($config_path, 'default');
 
 
-$db = Zend_Db::factory($config->db->type, array(
-    'host'     => $config->db->host,
-    'username' => $config->db->username,
-    'password' => $config->db->password,
-    'dbname'   => $config->db->name
-));
+
 
 $store = ARC2::getStore(array(
                         'db_name' => $config->arc->db->name,
@@ -23,10 +18,17 @@ $store = ARC2::getStore(array(
                         'store_name' => $config->arc->db->name
                         ));
 
-
+/** @todo   Work out if I need a normal database */
+/*
+$db = Zend_Db::factory($config->db->type, array(
+    'host'     => $config->db->host,
+    'username' => $config->db->username,
+    'password' => $config->db->password,
+    'dbname'   => $config->db->name
+));
 
 Zend_Db_Table::setDefaultAdapter($db);
-
+*/
 Zend_Layout::startMvc();
 
 $front = Zend_Controller_Front::getInstance();
