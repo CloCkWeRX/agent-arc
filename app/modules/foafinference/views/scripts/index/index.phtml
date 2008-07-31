@@ -1,6 +1,7 @@
-Settings
-Run every N minutes
-Infer:
-mboxsha1sums
-homepages
-names?
+<p>Smushing is currently <?php print $this->smush? "on" : "off"; ?>.</p>
+
+<p>You can configure this with `foafinference.smush = 1` in your default.ini, then simple set up a cronjob to wget this url.</p>
+
+<?php if ($this->smush) { ?>
+    <p>We've just smushed all <?php print implode(', ', $this->ifps); ?></p>.
+<?php } ?>
