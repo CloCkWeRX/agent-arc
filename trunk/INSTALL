@@ -9,3 +9,6 @@
 </VirtualHost>
 
 5) Make sure you allow .htaccess to work - AllowOverride All is kinda important (@todo fix the virtualhost example above)
+
+6) Think it's working? Hit up http://agent/install/
+7) Get your data in! Go to the SPARQL link -> 'load some RDF' -> Put in a data url - for instance http://triplr.org/rdf/clockwerx.blogspot.com/

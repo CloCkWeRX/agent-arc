@@ -56,6 +56,22 @@ class SparqlController extends Zend_Controller_Action
         $this->view->store  = $store;
     }
 
+    public function rawAction()
+    {
+        $store = Zend_Controller_Front::getInstance()->getParam('store');
+
+        $query = "SELECT ?s ?p ?o
+        WHERE {
+            ?s ?p ?o
+        }";
+
+        $result = $store->query($query);
+
+        $this->view->result = $result['result'];
+        $this->view->query  = $query;
+        $this->view->store  = $store;
+    }
+
     /**
      * Loads data into triplestore
      *

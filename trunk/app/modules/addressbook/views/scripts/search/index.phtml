@@ -1,7 +1,14 @@
 <h1>Search by</h1>
-<form action="/addressbook/search">
-    Email: <input type="text" name="email" value="daniel.oconnor@gmail.com" />
-    Nickname: <input type="text" name="nickname" value="CloCkWeRX" />
+<style type="text/css">
+    form.generic label input {
+        display: block;
+        width: 20em;
+    }
+</style>
+<form action="/addressbook/search" class="generic">
+    <p><label>Email <input type="text" name="email" value="<?php print $this->email; ?>" /></label></p>
+    <p><label>Nickname <input type="text" name="nickname" value="<?php print $this->nickname; ?>" /></label></p>
+    <p><label>Full name <input type="text" name="name" value="<?php print $this->name; ?>" /></label></p>
     <input type="submit" />
 </form>
 
