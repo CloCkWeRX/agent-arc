@@ -13,12 +13,31 @@ class AddressBook_ProfileController extends Zend_Controller_Action
         }
 
         if (!empty($email)) {
-            $query = 'SELECT ?person ?name ?mbox_sha1sum
+            $query = 'SELECT ?person ?name ?email ?url ?nick ?gender ?blog ?jabber ?mbox_sha1sum
 
                         WHERE {
                             ?person foaf:mbox_sha1sum "%s" .
                             ?person foaf:mbox_sha1sum ?mbox_sha1sum .
                             ?person foaf:name ?name .
+
+                            OPTIONAL {
+                                ?person foaf:mbox ?email .
+                            }
+                            OPTIONAL {
+                                ?person foaf:homepage ?url .
+                            }
+                            OPTIONAL {
+                                ?person foaf:weblog ?blog .
+                            }
+                            OPTIONAL {
+                                ?person foaf:nick ?nick .
+                            }
+                            OPTIONAL {
+                                ?person foaf:jabberID ?jabber
+                            }
+                            OPTIONAL {
+                                ?person foaf:gender ?gender
+                            }
                         }';
 
 
@@ -40,12 +59,28 @@ class AddressBook_ProfileController extends Zend_Controller_Action
         }
 
         if (!empty($url)) {
-            $query = 'SELECT ?person ?name ?url
+            $query = 'SELECT ?person ?name ?email ?url ?nick ?gender ?blog ?jabber ?mbox_sha1sum
 
                         WHERE {
                             ?person foaf:homepage <%s> .
                             ?person foaf:homepage ?url .
                             ?person foaf:name ?name .
+
+                            OPTIONAL {
+                                ?person foaf:mbox ?email .
+                            }
+                            OPTIONAL {
+                                ?person foaf:weblog ?blog .
+                            }
+                            OPTIONAL {
+                                ?person foaf:nick ?nick .
+                            }
+                            OPTIONAL {
+                                ?person foaf:jabberID ?jabber
+                            }
+                            OPTIONAL {
+                                ?person foaf:gender ?gender
+                            }
                         }';
 
 
@@ -68,12 +103,31 @@ class AddressBook_ProfileController extends Zend_Controller_Action
         }
 
         if (!empty($email)) {
-            $query = 'SELECT ?person ?name ?mbox_sha1sum
+            $query = 'SELECT ?person ?name ?email ?url ?nick ?gender ?blog ?jabber ?mbox_sha1sum
 
                         WHERE {
                             ?person foaf:mbox_sha1sum "%s" .
                             ?person foaf:mbox_sha1sum ?mbox_sha1sum .
                             ?person foaf:name ?name .
+
+                            OPTIONAL {
+                                ?person foaf:mbox ?email .
+                            }
+                            OPTIONAL {
+                                ?person foaf:homepage ?url .
+                            }
+                            OPTIONAL {
+                                ?person foaf:weblog ?blog .
+                            }
+                            OPTIONAL {
+                                ?person foaf:nick ?nick .
+                            }
+                            OPTIONAL {
+                                ?person foaf:jabberID ?jabber
+                            }
+                            OPTIONAL {
+                                ?person foaf:gender ?gender
+                            }
                         }';
 
 

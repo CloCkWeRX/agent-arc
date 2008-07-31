@@ -12,6 +12,18 @@
     <input type="submit" />
 </form>
 
+<h2>Or find a specific</h2>
+<form action="/addressbook/profile/mbox_sha1sum" class="generic">
+    <p><label>Email <input type="text" name="email" value="<?php print $this->email; ?>" /></label></p>
+    <input type="submit" />
+</form>
+
+<form action="/addressbook/profile/homepage" class="generic">
+    <p><label>Homepage <input type="text" name="url" value="<?php print $this->url; ?>" /></label></p>
+    <input type="submit" />
+</form>
+
+
 <?php if (!empty($this->result)) { ?>
     <?php print $this->partial('/search/_result_as_table.phtml', $this->result); ?>
 <?php } ?>
